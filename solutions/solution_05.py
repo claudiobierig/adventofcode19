@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import sys
-import itertools
 from intcomputer import Intcomputer
 
 
@@ -14,17 +13,12 @@ if __name__ == "__main__":
     input = read_input_to_list(sys.argv[2])
     if puzzle == "1":
         intcomputer = Intcomputer(input)
-        intcomputer.set_noun_verb(12, 2)
-        intcomputer.run()
-        print(intcomputer.get_start())
+        get_input = lambda : 1
+        intcomputer.run(input=get_input)
     elif puzzle == "2":
-        for noun, verb in itertools.product(range(100), range(100)):
-            intcomputer = Intcomputer(input)
-            intcomputer.set_noun_verb(noun, verb)
-            intcomputer.run()
-            result = intcomputer.get_start()
-            if result == 19690720:
-                print(100*noun + verb)
+        intcomputer = Intcomputer(input)
+        get_input = lambda : 5
+        intcomputer.run(input=get_input)
 
     else:
         print("Input argument 1 needs to be 1 or 2", file=sys.stderr)
