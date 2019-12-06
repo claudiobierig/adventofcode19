@@ -14,7 +14,7 @@ python3 solutions/solution_dd.py 2 input/dd.txt
 For the tests using the input it is actually important to run the tests from the repository directory.
 
 ~~~sh
-python3 -m doctest -v solutions/solution_dd.py
+python3 -m doctest -v solutions/*.py
 ~~~
 
 ## Lessons Learned
@@ -24,3 +24,8 @@ python3 -m doctest -v solutions/solution_dd.py
 - 02.12.
   - Remember: itertools.product is the Replacement for n for loops.
   - Remember: l=l2.copy() to make a shallow copy
+- 06.12.
+  - Remember: x = lambda input : output
+  - For larger tests doctest is not the right choice. Need to restructure for the next intcomputer
+  - For the next graph puzzle I'll try [NetworkX](https://networkx.github.io/documentation/stable/index.html) instead of just using a dict.
+  - Remember: python3: d.items(), python2: d.iteritems()
