@@ -29,3 +29,6 @@ python3 -m doctest -v solutions/*.py
   - For larger tests doctest is not the right choice. Need to restructure for the next intcomputer
   - For the next graph puzzle I'll try [NetworkX](https://networkx.github.io/documentation/stable/index.html) instead of just using a dict.
   - Remember: python3: d.items(), python2: d.iteritems()
+- 07.12.
+  - itertools.permutations gives all possible permutations
+  - generators for input where not the best choice
