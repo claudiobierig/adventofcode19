@@ -91,6 +91,16 @@ class Intcomputer:
     >>> intcomputer = Intcomputer(input)
     >>> intcomputer.run(input=[9])
     1001
+    >>> intcomputer = Intcomputer(input)
+    >>> try:
+    ...     intcomputer.run()
+    ... except Exception as e:
+    ...     print("Not enough input")
+    Not enough input
+    >>> intcomputer._index
+    0
+    >>> intcomputer.run(input=[9])
+    1001
     """
 
     def __init__(self, memory):
