@@ -15,6 +15,7 @@ For the tests using the input it is actually important to run the tests from the
 
 ~~~sh
 python3 -m doctest -v solutions/*.py
+python3 solutions/test_*.py -v
 ~~~
 
 ## Lessons Learned
