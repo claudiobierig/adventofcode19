@@ -13,12 +13,10 @@ if __name__ == "__main__":
     input = read_input_to_list(sys.argv[2])
     if puzzle == "1":
         intcomputer = Intcomputer(input)
-        get_input = lambda : 1
-        intcomputer.run(input=get_input)
+        intcomputer.run(input=[1])
     elif puzzle == "2":
         intcomputer = Intcomputer(input)
-        get_input = lambda : 5
-        intcomputer.run(input=get_input)
+        intcomputer.run(input=[5])
 
     else:
         print("Input argument 1 needs to be 1 or 2", file=sys.stderr)
