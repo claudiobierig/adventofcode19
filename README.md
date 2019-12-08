@@ -33,3 +33,5 @@ python3 solutions/test_*.py -v
 - 07.12.
   - itertools.permutations gives all possible permutations
   - generators for input where not the best choice
+- 08.12.
+  - Remember: numpy shape is called with array as argument and reshape is called as function from array
