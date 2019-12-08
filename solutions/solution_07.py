@@ -18,10 +18,8 @@ class Amplifier:
 
     def run(self, inp):
         out = []
-        def save_output(res):
-            out.append(res)
         try:
-            self._intcomputer.run(input=inp, output=save_output)
+            self._intcomputer.run(input=inp, output=out)
         except Exception as e:
             pass
         return out

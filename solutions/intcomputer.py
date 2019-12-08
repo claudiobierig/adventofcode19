@@ -28,7 +28,11 @@ class Intcomputer:
         return values
 
 
-    def run(self, input=[], output=print):
+    def run(self, input=None, output=None):
+        if input is None:
+            input = []
+        if output is None:
+            output = []
         while self._index < len(self._memory):
             operation = self._memory[self._index]
             if operation % 100 == 1:
@@ -46,7 +50,7 @@ class Intcomputer:
                 self._index += 2
             elif operation % 100 == 4:
                 values = self.get_instruction_values(1)
-                output(values[0])
+                output.append(values[0])
                 self._index += 2
             elif operation % 100 == 5:
                 values = self.get_instruction_values(2)
