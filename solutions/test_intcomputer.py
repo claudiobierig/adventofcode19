@@ -139,5 +139,30 @@ class TestIntcomputer(unittest.TestCase):
         intcomputer.run(input=[3], output=output)
         self.assertEqual(output[-1], 3)
 
+    def test_it_handles_relative_mode(self):
+        output = []
+        input = [109,1,204,-1,1001,100,1,100,1008,100,16,101,1006,101,0,99]
+        intcomputer = Intcomputer(input)
+        intcomputer.run(output=output)
+        self.assertEqual(output, input)
+
+    def test_it_can_write_to_memory_outside(self):
+        output = []
+        intcomputer = Intcomputer([1102,34915192,34915192,7,4,7,99])
+        intcomputer.run(output=output)
+        self.assertEqual(output, [34915192*34915192])
+    
+    def test_it_can_read_from_memory_outside(self):
+        output = []
+        intcomputer = Intcomputer([101,34915192,100,7,4,7,99,0])
+        intcomputer.run(output=output)
+        self.assertEqual(output, [34915192])
+
+    def test_it_handles_large_numbers(self):
+        output = []
+        intcomputer = Intcomputer([104,1125899906842624,99])
+        intcomputer.run(output=output)
+        self.assertEqual(output, [1125899906842624])
+
 if __name__ == "__main__":
     unittest.main()
