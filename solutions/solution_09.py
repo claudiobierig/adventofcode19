@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import sys
-import itertools
 from intcomputer import Intcomputer
 
 
