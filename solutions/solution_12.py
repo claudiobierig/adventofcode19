@@ -66,7 +66,6 @@ def the_same(one, two, i):
 
 def repeats(input):
     """
-    this assumes the first point we meet again is our starting point
     >>> input = [[[-1,0,2],[0,0,0]],[[2,-10,-7],[0,0,0]],[[4,-8,8],[0,0,0]],[[3,5,-1],[0,0,0]]]
     >>> repeats(input)
     2772
